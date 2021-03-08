@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<div class="put_home_2">
+    <h3>Хочешь акцию???</h3>
+
+</div>
+<div class="put_home">
+
+
+    <!-- <span>Хочешь АКЦИЮ?</span> -->
+    <input class="button_1" type="button"  onclick="enableSale()" name="sale" id="sale_1" value="Нажми меня!!!!!" > 
+    
+</div>
+    <div class="cards">
+
+        <div class="card">
+        <div class="pic">
+        <img class="pic1" src="images/card.jpg" alt="">
+        <img src="images/sale.png" alt="">
+        <img src="images/type.png" alt="">
+        </div>
+        
+        <div class="title">
+            <div>Тайная жизнь</div>
+            <div>домашних животных 2</div>
+        </div>   
+        <div class="price">
+            <div><div   id="sale_price">   15,00 руб. </div></div>
+            <div> <span id="common_price"> 17,00 руб.</span>   </div>
+        </div>
+        <div class="rank">
+            <!-- <span class="material-icons">
+                star star star star_half star_border
+                </span> -->
+        <span class="material-icons">star</span>
+        <span class="material-icons">star</span>
+        <span class="material-icons">star</span>
+        <span class="material-icons">star</span>
+        <span class="material-icons">star_border</span>
+        </div>
+        <div class="order">
+          <a href="https://www.behance.net/kupreev_cgartist">  <img src="images/button.jpg" alt=""> </a>
+        </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('sale_price').style.display = "none"
+        function enableSale(){
+        element1 = document.getElementById('sale_price');
+                    element1.style.display = "block";
+                    element1.classList.add("test2");
+                    element2 = document.getElementById('common_price');
+                    element2.classList.add("liza");
+        console.log("считаем привильные действия");
+        }
+        let block = document.querySelector('.card');
+        let order_1 = document.querySelector('.order')
+order_1.addEventListener('mouseenter', function () {
+    block.classList.add('order_2');
+});
+order_1.addEventListener('mouseleave', function () {
+    block.classList.remove('order_2');
+});
+
+
+    </script>
+</body>
+</html>
